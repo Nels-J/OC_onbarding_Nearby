@@ -2,19 +2,24 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nearby</title>
-    <meta name="description"
-        content="Quoi faire à proximité, dans ma rue, mon quartier ? Quels commerces, quels services, écoles, clubs, associations, ou professionnels de santé sont à coté de vous, à proximité??? Si vous vous posez ces questions, ce site communautaire devrait y répondre">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3.CSS Framework CDN from w3schools - https://www.w3schools.com/w3css/default.asp -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font-Awesome CDN for icons, pictures -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="styles/style.css">
 
+    <!-- Brand favicon and logo -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
 
+    <!-- Specific Font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nova+Script&display=swap" rel="stylesheet">
@@ -22,50 +27,85 @@
 </head>
 
 <body>
+    <!-- Top fixed Navbar  -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card" id="myNavbar">
 
-    <header>
-        <nav class="navbar">
-            <div>
-                <img src="images/favicon/favicon-32x32.png" alt="Logo du site"></img>
+            <a href="#home" class="w3-bar-item w3-button w3-large w3-hover-none w3-wide w3-hover-pink">Q</a>
+
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#apropos" class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink">POURQUOI</a>
+                <a href="#commerces" class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink">COMMERCES</a>
+                <a href="#ecoles" class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink">ECOLES</a>
+                <a href="#sante" class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink">SANTE</a>
+                <a href="#associations" class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink">ASSOCIATIONS</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-hover-text-pink">CONTACT</a>
             </div>
-            <div>
-                <a href="#accueil">Accueil</a>
-                <a href="#commerces">Commerces</a>
-                <a href="#transports">Transports</a>
-                <a href="#education">Education</a>
-                <a href="#sante">Santé</a>
-                <a href="#associations">Associations</a>
-            </div>
-        </nav>
+
+            <!-- Hide right-floated links on small screens and replace them with a menu icon (menu burger) -->
+            <a href="javascript:void(0)"
+                class="w3-bar-item w3-button w3-large w3-right w3-hide-large w3-hide-medium w3-hover-pink"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the burger icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-large w3-padding-16 w3-hover-pink">Fermer X</a>
+        <a href="#apropos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">POURQUOI</a>
+        <a href="#commerces" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">COMMERCES</a>
+        <a href="#ecoles" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">ECOLES</a>
+        <a href="#sante" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">SANTE</a>
+        <a href="#associations" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">ASSOCIATIONS</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">CONTACT</a>
+    </nav>
+
+    <!-- Hero - Header with full-height image -->
+    <header class="bgimg-1 w3-display-container" id="home">
+        <div class="w3-display-middle w3-white w3-opacity-min w3-round-small w3-center" style="padding:40px">
+            <span class="w3-jumbo w3-hide-small w3-text-pink">Quartier</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Quartier</span><br>
+            <span class="w3-large w3-text-black">Annuaire libre de mon Quartier</span>
+            <p>
+                <a href="#apropos" class="w3-button w3-round-small w3-pink w3-padding w3-margin-top w3-hover-white">En
+                    savoir plus</a>
+            </p>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat distinctio consequatur itaque iusto
-                expedita natus, illum quidem sunt doloribus veritatis quo nemo ad amet provident numquam modi non nihil
-                quasi magni cum rem. Enim vero architecto veritatis dolorem cupiditate, deserunt dolores molestiae
-                maxime
-                omnis deleniti numquam in amet velit eius voluptates provident repellendus. Pariatur esse animi impedit
-                optio earum delectus officiis commodi, exercitationem, perferendis voluptate doloremque suscipit
-                similique
-                recusandae magnam in, nobis rem quos excepturi tempore eveniet nostrum est ipsam. In, nemo.
-                Necessitatibus
-                numquam quibusdam illum dolor voluptas iure doloribus. Tempora voluptatum itaque cumque perferendis sint
-                iusto quod, fugit vitae adipisci officiis ipsam quam exercitationem placeat quae labore. Porro, possimus
-                nisi dolorum quibusdam tempora fuga rerum, minus voluptates, consectetur illo beatae incidunt ex.
-                Accusantium asperiores optio repellendus sit! Illum cupiditate odio quidem adipisci repellendus?
-                Voluptates
-                quia quis quisquam asperiores veritatis, eligendi blanditiis officia nisi odio tempora illum soluta
-                sapiente
-                aut aliquam, consequatur ut exercitationem nesciunt corrupti facilis sequi assumenda ullam? Enim odit
-                voluptatibus quo ut perferendis veniam. Laudantium quibusdam atque maiores minus. Eius sunt sed nihil
-                laboriosam pariatur possimus, nisi hic laudantium, ipsa consequatur nam? Corporis dolor, non similique
-                nam,
-                assumenda ad numquam, iure magnam necessitatibus cum obcaecati placeat quia?
-            </p>
-        </section>
-    </main>
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#apropos" class="w3-button w3-light-grey w3-hover-none w3-hover-pink"><i
+                class="fa fa-arrow-up w3-margin-right"></i>Retour en haut</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-linkedin w3-hover-text-pink"></i>
+        </div>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-pink">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon (Burger)
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

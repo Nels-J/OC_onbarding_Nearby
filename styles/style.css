@@ -1,54 +1,27 @@
-html,
-body {
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif
 }
 
-.navbar {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    top: 0px;
+body,
+html {
+    height: 100%;
+    line-height: 1.8;
 }
 
-.navbar img {
-    margin-right: 20px;
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/Girodet-3-1600x533.webp");
+    min-height: 100%;
 }
 
-.navbar a {
-    font-family: "Nova Script";
-    font-size: 1.5em;
-    color: dimgray;
-    text-decoration: none;
-    float: left;
-    margin-right: 1em;
-    position: relative;
-}
-
-.navbar a:focus {
-    color: deeppink;
-}
-
-.navbar a::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    transform: scaleX(0);
-    /* transform-origin: top left | top right | center(default);  */
-    transition: transform 0.2s ease;
-}
-
-.navbar a:hover:not(.navbar a:focus):before {
-    transform: scaleX(1);
-    background-color: deeppink;
+.w3-bar .w3-button {
+    padding: 16px;
 }
