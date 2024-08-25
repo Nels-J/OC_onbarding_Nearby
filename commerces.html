@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3.CSS Framework CDN from w3schools - https://www.w3schools.com/w3css/default.asp -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font-Awesome CDN for icons, pictures -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/edc6300013.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Brand favicon and logo -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <!-- Specific Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Script&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Top fixed Navbar  -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card" id="myNavbar">
+
+            <a href="./index.html"
+                class="w3-bar-item w3-button w3-large w3-hover-none w3-wide w3-text-pink w3-hover-pink">Quartier</a>
+
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="./index.html#apropos"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">POURQUOI</a>
+                <a href="./commerces.html"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">COMMERCES</a>
+                <a href="#ecoles"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">ECOLES</a>
+                <a href="#sante"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">SANTE</a>
+                <a href="#associations"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">ASSOCIATIONS</a>
+                <a href="./index.html#contact"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink  w3-hover-text-pink">CONTACT</a>
+            </div>
+
+            <!-- Hide right-floated links on small screens and replace them with a menu icon (menu burger) -->
+            <a href="javascript:void(0)"
+                class="w3-bar-item w3-button w3-large w3-right w3-hide-large w3-hide-medium w3-hover-pink"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the burger icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-large w3-padding-16 w3-hover-pink">Fermer X</a>
+        <a href="./index.html#apropos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">POURQUOI</a>
+        <a href="./commerces.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">COMMERCES</a>
+        <a href="#ecoles" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">ECOLES</a>
+        <a href="#sante" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">SANTE</a>
+        <a href="#associations" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">ASSOCIATIONS</a>
+        <a href="./index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">CONTACT</a>
+    </nav>
+
+
+   
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="./commerces.html" class="w3-button w3-light-grey w3-hover-none w3-hover-pink"><i
+                class="fa fa-arrow-up w3-margin-right"></i>Retour en haut</a>
+        <div class="w3-xlarge w3-section">
+            <a href="https://github.com/Nels-J" title="Github Nels-J profile" target="_blank"
+                class="w3-hover-text-pink">
+                <i class="fa fa-linkedin w3-text-blue w3-hover-text-pink"></i>
+            </a>
+        </div>
+        <p>Student project designed by
+            <a href="https://github.com/Nels-J" title="Github Nels-J profile" target="_blank"
+                class="w3-hover-text-pink">Nels-J
+            </a>
+            and powered with
+            <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon (Burger)
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
