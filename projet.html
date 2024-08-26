@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3.CSS Framework CDN from w3schools - https://www.w3schools.com/w3css/default.asp -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font-Awesome CDN for icons, pictures -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/edc6300013.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Brand favicon and logo -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <!-- Specific Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Script&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="w3-light-grey">
+    <!-- Top fixed Navbar  -->
+    <div>
+        <div class="w3-bar w3-black w3-card" id="myNavbar">
+
+            <a href="./index.html" id="brandlogo"
+                class="w3-bar-item w3-button w3-large w3-hover-none w3-wide w3-text-pink w3-hover-pink">Quartier</a>
+
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="./index.html#apropos"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">POURQUOI</a>
+                <a href="./commerces.html"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">COMMERCES</a>
+                <a href="./projet.html"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink w3-hover-text-pink">PROJET</a>
+                <a href="./index.html#contact"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-pink  w3-hover-text-pink">CONTACT</a>
+            </div>
+
+            <!-- Hide right-floated links on small screens and replace them with a menu icon (menu burger) -->
+            <a href="javascript:void(0)"
+                class="w3-bar-item w3-button w3-large w3-right w3-hide-large w3-hide-medium w3-hover-pink"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the burger icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-large w3-padding-16 w3-hover-pink">Fermer X</a>
+        <a href="./index.html#apropos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">POURQUOI</a>
+        <a href="./commerces.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">COMMERCES</a>
+        <a href="./projet.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">PROJET</a>
+        <a href="./index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-pink">CONTACT</a>
+    </nav>
+
+
+    <!-- w3-content defines a container for fixed size centered content, 
+        and is wrapped around the whole page content -->
+    <main class="w3-content" style="max-width:1200px">
+        <h1 class="w3-center w3-xxxlarge w3-text-pink"><b>Le projet</b></h1>
+        <p class="w3-center">Bienvenue, ici vous serez qui je suis, et pourquoi ce projet dans les grande lignes
+            seulement.<br />
+            Ce site éphémère n'a aucune vocation commerciale, ce n'est qu'un projet étudiant.</span></p>
+
+        <!-- Grid -->
+        <div class="w3-row">
+
+            <!-- Blog entries -->
+            <div class="w3-col l8 s12">
+
+                <!-- Blog entry -->
+                <div class="w3-card-4 w3-margin w3-white">
+                    <div style="position: relative; padding-bottom: 45.3125%; height: 0;"><iframe
+                            src="https://www.loom.com/embed/2dc1632372a348dca61ec7a1fc6b673f?sid=6a98808d-cd7e-43df-93ae-e21ffe60f7bd"
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+                    <div class="w3-container">
+                        <h3><b>Pourquoi ?</b></h3>
+                        <h5>Le projet "Quartier", <span class="w3-opacity">Août 2024</span></h5>
+                    </div>
+
+                    <div class="w3-container">
+                        <p>Dans la cadre d’une inscription à une formation en alternance, le centre de formation me
+                            demande en amont d’effectuer des cours sur sa plateforme pour valider un niveau d’entrée et
+                            la création d’un site web pour la mise en application des cours.<br /><br />
+                            J’ai donc imaginé une ébauche de site dédié au quartier où l'on vit, afin de faire un
+                            recensement de différentes choses pertinentes selon moi pour la vie au
+                            quotidien.<br /><br />
+                            La problématique est de résoudre un vide pour ceux qui cherchent, médecins, assistantes
+                            maternelles, commerces, professionnels en tous genres, sortir de l’ombre des auto
+                            entrepreneurs ou des associations, tout cela ultra localisé à l’échelle du quartier.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Blog entry -->
+                <div class="w3-card-4 w3-margin w3-white">
+                    <img src="images/memeCSS.gif" alt="meme CSS" style="width:100%">
+                    <div class="w3-container">
+                        <h3><b>Mini framework CSS</b></h3>
+                        <h5>Pouquoi j'ai utilisé W3.CSS, <span class="w3-opacity">Août 2024</span></h5>
+                    </div>
+
+                    <div class="w3-container">
+                        <p>J’ai pendant et après les cours de la plateforme ressenti le besoin d’ajouter quelque chose
+                            dans le projet.<br /><br />
+                            Ce n’était pas ma plus brillante idée, mais cela m’a permis de mieux comprendre comment
+                            fonctionne un framework CSS, en tout cas d’en avoir une idée par la pratique.<br /><br />
+                            J’ai volontaire choisi celui-ci, qui ne me semblait pas trop tentaculaire et abordable de
+                            prime abord, j’aurais très bien pu utiliser Bootstrap, Tailwind CSS qui sont des framework
+                            CSS reconnu, mais non.<br />
+                            Je pensais qu'une fois la phase de découverte passée je pourrais coder plus rapidement et de
+                            manière plus fun mon site mais avec le CSS on est jamais au bout de nos peines….<br /><br />
+                            La bonne nouvelle, c’est qu’il y a une marge de progression encore devant moi.<br />A
+                            suivre….
+                        </p>
+                    </div>
+                </div>
+                <!-- END BLOG ENTRIES -->
+            </div>
+
+            <!-- Introduction menu -->
+            <div class="w3-col l4">
+                <!-- About Card -->
+                <div class="w3-card w3-margin w3-margin-top">
+                    <img src="images/Nelson.jpg" style="width:100%">
+                    <div class="w3-container w3-white">
+                        <h4><b>Nelson JESUS</b></h4>
+                        <p>Auteur de ce site pour le besoin d'un test de validation dans le cadre d'une candidature
+                            auprès d'un centre de formation. L'objectif étant de poursuivre une reconversion
+                            professionnelle dans le dévelopement informatique.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- END Introduction Menu -->
+            </div>
+
+            <!-- END GRID -->
+        </div><br>
+
+        <!-- END w3-content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="./projet.html" class="w3-button w3-light-grey w3-hover-none w3-hover-pink"><i
+                class="fa fa-arrow-up w3-margin-right"></i>Retour en haut</a>
+        <div class="w3-xlarge w3-section">
+            <a href="https://www.linkedin.com/in/nelson-jesus" title="Nelson JESUS LinkedIn profile" target="_blank"
+                class="w3-hover-text-pink">
+                <i class="fa fa-linkedin w3-text-blue w3-hover-text-pink"></i>
+            </a>
+        </div>
+        <p>Student project designed by
+            <a href="https://github.com/Nels-J" title="Github Nels-J profile" target="_blank"
+                class="w3-hover-text-pink">Nels-J
+                <i class="fa fa-github  w3-hover-text-pink"></i>
+            </a>
+            and powered with
+            <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon (Burger)
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
